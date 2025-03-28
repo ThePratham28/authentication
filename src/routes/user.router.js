@@ -57,7 +57,6 @@ authRouter.post("/login", async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" });
         }
 
-        // req.session.userId = user._id;
 
         return res.status(200).json({ message: "Login successful" });
     } catch (error) {
@@ -70,11 +69,6 @@ authRouter.post("/login", async (req, res) => {
 
 authRouter.post("/logout", async (req, res) => {
     try {
-        // req.session.destroy((err) => {
-        //     if (err) {
-        //         return res.status(500).json({ message: "Logout failed" });
-        //     }
-        // });
 
         return res.status(200).json({ message: "Logout successful" });
     } catch (error) {
